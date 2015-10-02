@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:background="#f2f2f2">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+<LinearLayout
+        android:id="@+id/lay1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:layout_margin="15dp"
+        android:gravity="right|center_vertical|center_horizontal"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ditlogo">
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:background="#990000"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:id="@+id/text_view_guesthouseonerooms_available"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="LOGIN"
+                android:paddingBottom ="10dip"
+
+                android:textColor="#fab60f"
+                android:textSize="30dip"
+                android:layout_margin="2dip"
+                android:textStyle="bold"
+                android:typeface="sans"
+                />
+
+            <ImageView
+                android:layout_width="70dip"
+                android:layout_height="70dip"
+                android:visibility="gone"
+                android:layout_alignBottom="@+id/text_view_guesthouseonerooms_available"
+                android:layout_toRightOf="@+id/text_view_guesthouseonerooms_available"
+                android:layout_toEndOf="@+id/text_view_guesthouseonerooms_available"/>
+
+        </RelativeLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+    <!-- Login Procedure -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/framlayout_transparent"
+        android:layout_weight="14.27"
+        android:background="#1C999999"
+        >
+
+        <!-- OLD CODE -->
+        <!-- Login progress -->
+        <ProgressBar
+            android:id="@+id/login_progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center_vertical|center"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_margin="20dip"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_aadhaar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Your Aadhaar"
+                android:inputType="number"
+                android:maxLength="12"
+                android:textColorHint="#990000"
+                android:textColor="#990000"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+            <Button android:id="@+id/bt_getotp"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="#990000"
+                android:text="Submit"
+                android:textColor="#fab60f"
+                android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/et_tt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="An OTP is sent to your registered Mobile number. Please enter the OTP"
+                android:textColor="#990000"
+                android:layout_marginTop="16dp"
+                android:textColorHint="#990000"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/et_otp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter OTP"
+                android:imeOptions="actionUnspecified"
+                android:textColor="#990000"
+                android:layout_marginTop="16dp"
+                android:textColorHint="#990000"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+            <Button android:id="@+id/bt_login"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="#990000"
+                android:textColor="#fab60f"
+                android:text="Login"
+                android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+</LinearLayout>
+</ScrollView>

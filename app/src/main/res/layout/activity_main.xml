@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#f2f2f2">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:id="@+id/lay1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:layout_margin="10dp"
+            android:gravity="right|center_vertical|center_horizontal"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/ditlogo">
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/framlayout_transparent"
+            android:background="#1C999999"
+            >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <!-- Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|center_vertical|center_horizontal"
+                android:layout_marginBottom="50dp"
+                android:background="#990000"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Anganwadi Enrollment Management Client"
+                    android:gravity="center|center_vertical|center_horizontal"
+                    android:textSize="22sp"
+                    android:layout_margin="10dp"
+                    android:textStyle="bold"
+                    android:textColor="#fab60f"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+
+            </LinearLayout>
+
+            <!-- Device ID -->
+            <!-- Date Center Name -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="IMEI"
+                    android:textColor="#990000"
+                    android:layout_width="match_parent"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/et_aanganwadi_IMEI"
+                    android:layout_width="match_parent"
+                    android:textColor="#990000"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+
+            <!-- Date Center Name -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Date:-"
+                    android:layout_width="match_parent"
+                    android:textColor="#990000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/et_aanganwadi_date"
+                    android:layout_width="match_parent"
+                    android:textColor="#990000"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+
+
+
+            <!-- Aanganwadi Center Name -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Aanganwadi Center Name"
+                    android:layout_width="match_parent"
+                    android:textSize="16sp"
+                    android:textColor="#990000"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/et_aanganwadi_center_name"
+                    android:layout_width="match_parent"
+                    android:textColor="#990000"
+
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- Phone Number -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Phone Number"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#990000"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <EditText
+                    android:id="@+id/et_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColor="#990000"
+                    android:minEms="10"
+                    android:maxLength="10" />
+            </LinearLayout>
+
+            <!-- Total Number Of Enrolments -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Total Number Of Enrolllments"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#990000"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/et_total_number_of_enrollments"
+                    android:layout_width="match_parent"
+                    android:textColor="#990000"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"/>
+            </LinearLayout>
+
+            <!-- Issues and Feedbacks about the training -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_margin="10dp"
+                android:textColor="#990000"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Issues and Feedbacks"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#990000"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/et_issuesnfeedbacks"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:textColor="#990000"
+                    android:inputType="textMultiLine" />
+            </LinearLayout>
+
+            <!-- Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/bt_submit_data"
+                    android:text="Submit"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#990000"
+                    android:textColor="#fab60f"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</ScrollView>

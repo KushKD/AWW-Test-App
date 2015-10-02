@@ -1,0 +1,15 @@
+C:\Users\kuush\Documents\Visual Studio 2015\Projects\Pyhon\RestService\RestService\bin\RestService.dll.config
+C:\Users\kuush\Documents\Visual Studio 2015\Projects\Pyhon\RestService\RestService\bin\RestService.dll
+C:\Users\kuush\Documents\Visual Studio 2015\Projects\Pyhon\RestService\RestService\bin\RestService.pdb
+C:\Users\kuush\Documents\Visual Studio 2015\Projects\Pyhon\RestService\RestService\obj\Release\RestService.dll
+C:\Users\kuush\Documents\Visual Studio 2015\Projects\Pyhon\RestService\RestService\obj\Release\RestService.pdb
+C:\Users\kuush\Desktop\AWWwebservice\POST DATA REST Service\RestService\RestService\bin\RestService.dll.config
+C:\Users\kuush\Desktop\AWWwebservice\POST DATA REST Service\RestService\RestService\bin\RestService.dll
+C:\Users\kuush\Desktop\AWWwebservice\POST DATA REST Service\RestService\RestService\bin\RestService.pdb
+C:\Users\kuush\Desktop\AWWwebservice\POST DATA REST Service\RestService\RestService\obj\Release\RestService.dll
+C:\Users\kuush\Desktop\AWWwebservice\POST DATA REST Service\RestService\RestService\obj\Release\RestService.pdb
+C:\AWW webservice_Final\AWWwebservice\POST DATA REST Service\RestService\RestService\bin\RestService.dll.config
+C:\AWW webservice_Final\AWWwebservice\POST DATA REST Service\RestService\RestService\bin\RestService.dll
+C:\AWW webservice_Final\AWWwebservice\POST DATA REST Service\RestService\RestService\bin\RestService.pdb
+C:\AWW webservice_Final\AWWwebservice\POST DATA REST Service\RestService\RestService\obj\Release\RestService.dll
+C:\AWW webservice_Final\AWWwebservice\POST DATA REST Service\RestService\RestService\obj\Release\RestService.pdb
