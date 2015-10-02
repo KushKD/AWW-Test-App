@@ -141,6 +141,7 @@ public class MainActivity extends Activity {
             dialog = new ProgressDialog(MainActivity.this);
             dialog.setMessage(Constants.SERVER_MESSAGE);
             dialog.show();
+            dialog.setCancelable(false);
         }
 
         @Override

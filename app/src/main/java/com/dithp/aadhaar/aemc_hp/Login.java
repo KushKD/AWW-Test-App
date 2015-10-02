@@ -136,6 +136,7 @@ public class Login extends Activity {
             dialog = new ProgressDialog(Login.this);
             dialog.setMessage(Constants.SERVER_MESSAGE);
             dialog.show();
+            dialog.setCancelable(false);
         }
 
         @Override
@@ -188,7 +189,7 @@ public class Login extends Activity {
             dialog = new ProgressDialog(Login.this);
             dialog.setMessage(Constants.SERVER_MESSAGE);
             dialog.show();
-
+            dialog.setCancelable(false);
         }
 
         @Override
