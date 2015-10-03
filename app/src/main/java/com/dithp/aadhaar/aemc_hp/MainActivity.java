@@ -3,6 +3,8 @@ package com.dithp.aadhaar.aemc_hp;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.telephony.TelephonyManager;
@@ -95,8 +97,12 @@ public class MainActivity extends Activity {
       if(phoneNumber.length()!=0){
           if(phoneNumber.length()== 10) {
               if(totalEnrollments.length()!=0) {
-                  PostData pd = new PostData();
-                  pd.execute(aanganwadi_Name, phoneNumber, totalEnrollments, issuesNfeedbacks, date, deviceID);
+                  if(isOnline()) {
+                      PostData pd = new PostData();
+                      pd.execute(aanganwadi_Name, phoneNumber, totalEnrollments, issuesNfeedbacks, date, deviceID);
+                  }else{
+                      Toast.makeText(this, "Network isn't available", Toast.LENGTH_LONG).show();
+                  }
               }else{
                   Toast.makeText(getApplicationContext(),Constants.Enroll ,Toast.LENGTH_LONG).show();
               }
@@ -233,4 +239,13 @@ public class MainActivity extends Activity {
         editText_phone_no.setText("");
     }
 
+    protected boolean isOnline() {
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(MainActivity.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        if (netInfo != null && netInfo.isConnectedOrConnecting()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

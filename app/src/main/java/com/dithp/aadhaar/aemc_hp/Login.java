@@ -3,6 +3,8 @@ package com.dithp.aadhaar.aemc_hp;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -69,6 +71,15 @@ public class Login extends Activity {
         }
     }
 
+    protected boolean isOnline() {
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Login.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        if (netInfo != null && netInfo.isConnectedOrConnecting()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     private void getOtpandAadhaa() {
 
@@ -76,8 +87,12 @@ public class Login extends Activity {
         String aadhaar_a = editText_aadhaarLogin.getText().toString().trim();
         if(!otp.isEmpty()){
             if(otp.length()== 6){
-                OTP_Async OA = new OTP_Async();
-                OA.execute(aadhaar_a,otp);
+                if(isOnline()) {
+                    OTP_Async OA = new OTP_Async();
+                    OA.execute(aadhaar_a, otp);
+                 } else {
+                Toast.makeText(this, "Network isn't available", Toast.LENGTH_LONG).show();
+            }
             }else{
                 Toast.makeText(getApplicationContext(),Constants.OTPError1,Toast.LENGTH_LONG).show();
             }
@@ -94,9 +109,12 @@ public class Login extends Activity {
         if(!aadhaar.isEmpty() ){
             if(aadhaar.length() == 12 ){
 
-
+if(isOnline()){
                     Login_Async LA  = new Login_Async();
-                    LA.execute(aadhaar);
+                    LA.execute(aadhaar);}
+             else {
+                Toast.makeText(this, "Network isn't available", Toast.LENGTH_LONG).show();
+            }
 
 
 
@@ -236,3 +254,11 @@ public class Login extends Activity {
     }
 
 }
+
+
+
+
+
+
+
+
