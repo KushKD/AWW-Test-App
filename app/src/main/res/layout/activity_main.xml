@@ -57,7 +57,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:text="Anganwadi Enrollment Management Client"
+                    android:text="Anganwadi Enrolment Management Client"
                     android:gravity="center|center_vertical|center_horizontal"
                     android:textSize="22sp"
                     android:layout_margin="10dp"
@@ -132,7 +132,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:text="Aanganwadi Center Name"
+                    android:text="Anganwadi Center Name"
                     android:layout_width="match_parent"
                     android:textSize="16sp"
                     android:textColor="#990000"
@@ -183,7 +183,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:text="Total Number Of Enrolllments"
+                    android:text="Total Number Of Enrolments"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:textColor="#990000"

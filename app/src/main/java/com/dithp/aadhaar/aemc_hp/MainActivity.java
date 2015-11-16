@@ -8,6 +8,7 @@ import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.telephony.TelephonyManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -97,6 +98,24 @@ public class MainActivity extends Activity {
       if(phoneNumber.length()!=0){
           if(phoneNumber.length()== 10) {
               if(totalEnrollments.length()!=0) {
+                  //Save Data Locally
+                  try {
+                      DatabaseHandler db = new DatabaseHandler(this);
+                      db.addContact(aanganwadi_Name, phoneNumber, totalEnrollments, issuesNfeedbacks, date, deviceID);
+                      clearData();
+
+
+                      //Refresh Time
+                      Time_Async TA = new Time_Async();
+                      TA.execute();
+                      Toast.makeText(getApplicationContext(),"Data Saved Locally",Toast.LENGTH_LONG).show();
+
+                  }catch(Exception e){
+                      Log.d("There Was an Error",e.getLocalizedMessage());
+                      Log.d("There Was an Error", "While Creating the Database");
+                      Toast.makeText(getApplicationContext(),"Unable to Save Data",Toast.LENGTH_LONG).show();
+                  }
+
                   if(isOnline()) {
                       PostData pd = new PostData();
                       pd.execute(aanganwadi_Name, phoneNumber, totalEnrollments, issuesNfeedbacks, date, deviceID);
@@ -177,7 +196,7 @@ public class MainActivity extends Activity {
 
 
 
-               // System.out.println(userJson.toString());
+               System.out.println(userJson.toString());
                 OutputStreamWriter out = new   OutputStreamWriter(conn.getOutputStream());
                 out.write(userJson.toString());
                 out.close();
@@ -246,6 +265,34 @@ public class MainActivity extends Activity {
             return true;
         } else {
             return false;
+        }
+    }
+
+
+    class Time_Async extends AsyncTask<String,String,String>{
+
+        private ProgressDialog dialog;
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            dialog = new ProgressDialog(MainActivity.this);
+            dialog.setMessage("Updating time and Date ");
+            dialog.show();
+            dialog.setCancelable(false);
+        }
+
+        @Override
+        protected String doInBackground(String... params) {
+            DateFormat df = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+            String dateGetting = df.format(Calendar.getInstance().getTime());
+            return dateGetting;
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            dialog.dismiss();
+            textView_Aanganwari.setText(s);
         }
     }
 }
