@@ -36,7 +36,7 @@ public class SplashScreen extends Activity {
 
                 } finally {
 
-                    startActivity(new Intent(SplashScreen.this, Login.class));
+                    startActivity(new Intent(SplashScreen.this, Home.class));
                     finish();
                 }
             };

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f4f4"
+   >
+
+    <!-- Divide the Screen In three Parts -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+
+        <!-- ONE -->
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1.2"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:orientation="vertical"
+            android:background="#d52736">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:textColor="#fab60f"
+                android:textStyle="bold"
+                android:textSize="26sp"
+                android:text=" Aadhaar Enrolment Monitoring"/>
+        </LinearLayout>
+
+
+        <!-- Two -->
+        <LinearLayout
+            android:id="@+id/ll2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.9"
+            android:orientation="horizontal">
+
+            <!-- Inner ONE -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal|center_vertical|center"
+                android:layout_margin="2dp"
+                android:background="#9dbda9"
+                android:layout_weight="1">
+
+            <!-- LMK Reporting -->
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/button_report"
+                            android:padding="5dip" >
+                        <LinearLayout
+                            android:id="@+id/thumbnail_report"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center|center_vertical|center_horizontal"
+                            android:layout_margin="3dip" >
+
+                            <ImageView
+                                android:id="@+id/image_report"
+                                android:contentDescription="@string/app_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/icn_1" />
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center|center_horizontal|center_vertical"
+                                android:textSize="24sp"
+                                android:text="Village Level Entrepreneur"/>
+                        </LinearLayout>
+                        </RelativeLayout>
+            </LinearLayout>
+
+            <!-- Inner Two -->
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:gravity="center_horizontal|center_vertical|center"
+                    android:background="#7000ad96"
+                    android:layout_weight="1">
+
+                <!-- CSC PEC Reporting -->
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center|center_vertical|center_horizontal"
+                        android:layout_margin="3dip" >
+
+                        <ImageView
+                            android:contentDescription="@string/app_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icn_3" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center|center_horizontal|center_vertical"
+                            android:textSize="24sp"
+                            android:text="Anganwadi Enrolment"/>
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- Layout Three -->
+        <LinearLayout
+            android:id="@+id/ll3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="0.9" >
+
+
+            <!-- One -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal|center_vertical|center"
+                android:background="#1595a6"
+                android:layout_margin="2dp"
+                android:layout_weight="1">
+
+                <!-- CSC PEC Reporting -->
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center|center_vertical|center_horizontal"
+                        android:layout_margin="3dip" >
+
+                        <ImageView
+                            android:contentDescription="@string/app_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icn_2" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center|center_horizontal|center_vertical"
+                            android:textSize="24sp"
+                            android:text="Permanent Enrolment Center"/>
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <!-- TWO -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:background="#80666666"
+                    android:gravity="center_horizontal|center_vertical|bottom"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="right|center_vertical|center_horizontal"
+                        android:layout_margin="3dip" >
+
+
+                        <TextView
+                            android:contentDescription="@string/app_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#d52736"
+                            android:layout_margin="3dp"
+                            android:textSize="16sp"
+                            android:text="Website: aadhaar.hp.gov.in"/>
+
+                        <TextView
+                            android:contentDescription="@string/app_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#d52736"
+                            android:layout_margin="3dp"
+                            android:textSize="16sp"
+                            android:text="Email Address: aadhaar@hp.gov.in"/>
+                        <TextView
+                            android:contentDescription="@string/app_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#d52736"
+                            android:layout_margin="3dp"
+                            android:textSize="16sp"
+                            android:text="Contact No: 0177-2626709"/>
+                        <TextView
+                            android:contentDescription="@string/app_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#d52736"
+                            android:layout_margin="3dp"
+                            android:textSize="16sp"
+                            android:gravity="left"
+                            android:text="Toll Free HelpLine: 1967"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+</LinearLayout>

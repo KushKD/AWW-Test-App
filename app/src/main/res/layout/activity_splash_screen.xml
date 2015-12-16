@@ -22,7 +22,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@mipmap/ditlogo">
+            android:background="@drawable/ditlogo">
 
         </LinearLayout>
 
@@ -41,7 +41,7 @@
             android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@mipmap/center_logo_aadhaar">
+            android:background="@drawable/center_logo_aadhaar">
 
         </LinearLayout>
         <TextView

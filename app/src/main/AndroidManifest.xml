@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.dithp.aadhaar.aemc_hp" >
+    package="com.dithp.aadhaar.aemc_hp">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -10,35 +10,39 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:largeHeap="true"
-        android:theme="@style/AppTheme" >
-        <activity android:name=".SplashScreen"
-            android:screenOrientation="portrait"
-            android:launchMode="singleInstance">
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashScreen"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleInstance"
             android:noHistory="true"
-            android:screenOrientation="portrait"
-            android:launchMode="singleInstance">
-        </activity>
-        <activity android:name=".Login"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".Login"
+            android:launchMode="singleInstance"
             android:noHistory="true"
-            android:screenOrientation="portrait"
-            android:launchMode="singleInstance">
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".EndScreen"
+            android:launchMode="singleInstance"
             android:noHistory="true"
-            android:screenOrientation="portrait"
-            android:launchMode="singleInstance">
-        </activity>
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".Home"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
