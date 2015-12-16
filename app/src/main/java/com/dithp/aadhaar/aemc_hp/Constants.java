@@ -12,7 +12,7 @@ public class Constants {
     public static final String methord_Login = "";
     public static final String methord_otp = "";
     public static final String Login_Success = "OTP has been sent on registered mobile number";
-    public static final String OTP_Successfull = "";
+    public static final String OTP_Successfull = "Successful";
     public static final String DATASENT = "Details Sent Succcessfully";
     public static final String URL_BASE = "";
     public static final String JSON_Save = "";
