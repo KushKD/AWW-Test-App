@@ -27,17 +27,11 @@
         <activity
             android:name=".MainActivity"
             android:launchMode="singleInstance"
-            android:noHistory="true"
             android:screenOrientation="portrait"></activity>
         <activity
             android:name=".Login"
             android:launchMode="singleInstance"
-            android:noHistory="true"
-            android:screenOrientation="portrait"></activity>
-        <activity
-            android:name=".EndScreen"
-            android:launchMode="singleInstance"
-            android:noHistory="true"
+            android:alwaysRetainTaskState="true"
             android:screenOrientation="portrait"></activity>
         <activity
             android:name=".Home"

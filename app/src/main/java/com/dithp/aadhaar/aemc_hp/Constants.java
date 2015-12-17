@@ -22,7 +22,7 @@ public class Constants {
     public static final String SERVER_MESSAGE = "";
     public static final String AError1 ="";
     public static final String AError2 = "" ;
-    public static final String OTPError1 = "";
+    public static final String OTPError1 = "Please Ensure that the OTP is Valid";
     public static final String OTPError2 = "Please enter the OTP that has been sent to your Mobile number";
     public static final String EXIT = "Press the back button once again to close the application";
     public static final String Enroll = "Please Enter the total no of enrollments done today ";

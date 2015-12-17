@@ -58,8 +58,6 @@ public class Login extends Activity {
             editText_otpLogin.setHintTextColor(Color.parseColor("#000000"));
             tv_header.setText(HeaderText);
 
-            editText_otpLogin.setEnabled(false);
-
             button_getOTP.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -77,6 +75,29 @@ public class Login extends Activity {
         }else{
             Toast.makeText(getApplicationContext(),Constants.Error1,Toast.LENGTH_LONG).show();
         }
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState)
+    {
+
+        EditText etAadhaar = (EditText)findViewById(R.id.et_aadhaar);
+        String Save_Aadhaar = etAadhaar.getText().toString().trim();
+        savedInstanceState.putString("AADHAAR", Save_Aadhaar);
+        //savedInstanceState.putString("OTP", otp);
+
+        super.onSaveInstanceState(savedInstanceState);
+
+
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        aadhaar = savedInstanceState.getString("AADHAAR");
+        editText_aadhaarLogin.setText(aadhaar);
+       // otp = savedInstanceState.getString("OTP");
+        // ... recover more data
     }
 
     @Override
@@ -124,9 +145,9 @@ public class Login extends Activity {
     }
     private void getAadhaar() {
 
+
+
         aadhaar = editText_aadhaarLogin.getText().toString().trim();
-
-
         if(!aadhaar.isEmpty() ){
             if(aadhaar.length() == 12 ){
 
