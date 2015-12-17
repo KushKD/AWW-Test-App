@@ -49,6 +49,7 @@
 
             <!-- Header -->
             <LinearLayout
+                android:id="@+id/header"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center|center_vertical|center_horizontal"
@@ -57,12 +58,12 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:text="Anganwadi Enrolment Management Client"
+                    android:text="Aadhaar Enrolment Management Client"
                     android:gravity="center|center_vertical|center_horizontal"
                     android:textSize="22sp"
                     android:layout_margin="10dp"
                     android:textStyle="bold"
-                    android:textColor="#fab60f"
+                    android:textColor="#FFFFFF"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -81,7 +82,7 @@
 
                 <TextView
                     android:text="IMEI"
-                    android:textColor="#990000"
+                    android:textColor="#000000"
                     android:layout_width="match_parent"
                     android:textSize="16sp"
                     android:textStyle="bold"
@@ -107,7 +108,7 @@
                 <TextView
                     android:text="Date:-"
                     android:layout_width="match_parent"
-                    android:textColor="#990000"
+                    android:textColor="#000000"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:layout_height="wrap_content" />
@@ -132,10 +133,10 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:text="Anganwadi Center Name"
+                    android:text="Center Name"
                     android:layout_width="match_parent"
                     android:textSize="16sp"
-                    android:textColor="#990000"
+                    android:textColor="#000000"
                     android:textStyle="bold"
                     android:layout_height="wrap_content" />
 
@@ -159,7 +160,7 @@
                     android:text="Phone Number"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    android:textColor="#990000"
+                    android:textColor="#000000"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     />
@@ -186,7 +187,7 @@
                     android:text="Total Number Of Enrolments"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    android:textColor="#990000"
+                    android:textColor="#000000"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -211,7 +212,7 @@
                     android:text="Issues and Feedbacks"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    android:textColor="#990000"
+                    android:textColor="#000000"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -219,7 +220,7 @@
                     android:id="@+id/et_issuesnfeedbacks"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:textColor="#990000"
+                    android:textColor="#000000"
                     android:inputType="textMultiLine" />
             </LinearLayout>
 
@@ -239,7 +240,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#990000"
-                    android:textColor="#fab60f"/>
+                    android:textColor="#ffffff"/>
 
 
             </LinearLayout>

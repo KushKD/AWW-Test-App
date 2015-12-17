@@ -3,6 +3,7 @@ package com.dithp.aadhaar.aemc_hp;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
@@ -12,6 +13,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,6 +41,8 @@ public class MainActivity extends Activity {
     private TextView textView_Aanganwari , textView_IMEI;
     private String aanganwadi_Name, phoneNumber,totalEnrollments, issuesNfeedbacks ,date, deviceID = null;
     private int backButtonCount = 0;
+    LinearLayout L_Header;
+    String HeaderColor;
     URL url;
     HttpURLConnection conn;
     StringBuilder sb = new StringBuilder();
@@ -61,9 +65,16 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Bundle bundle = getIntent().getExtras();
+        HeaderColor = bundle.getString("Color");
+
+
          Flag_Initialize = InitializeControls();
 
         if (Flag_Initialize){
+            L_Header.setBackgroundColor(Color.parseColor(HeaderColor));
+            button_submit.setBackgroundColor(Color.parseColor(HeaderColor));
             DateFormat df = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
             String dateGetting = df.format(Calendar.getInstance().getTime());
             textView_Aanganwari.setText(dateGetting);
@@ -148,6 +159,7 @@ public class MainActivity extends Activity {
         editText_issues = (EditText)findViewById(R.id.et_issuesnfeedbacks);
         textView_Aanganwari = (TextView)findViewById(R.id.et_aanganwadi_date);
         textView_IMEI = (TextView)findViewById(R.id.et_aanganwadi_IMEI);
+            L_Header = (LinearLayout)findViewById(R.id.header);
 
         return true;
         }catch (Exception e){
@@ -240,8 +252,9 @@ public class MainActivity extends Activity {
                 clearData();
             dialog.dismiss();
             Toast.makeText(getApplicationContext(), finalResult, Toast.LENGTH_SHORT).show();
-                Intent i = new Intent(MainActivity.this,EndScreen.class);
+                Intent i = new Intent(MainActivity.this,Home.class);
                 startActivity(i);
+                MainActivity.this.finish();
             }
             else{
                 dialog.dismiss();

@@ -45,6 +45,7 @@
 
             <!-- Inner ONE -->
             <LinearLayout
+                android:id="@+id/csc_click"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal|center_vertical|center"
@@ -52,7 +53,7 @@
                 android:background="#9dbda9"
                 android:layout_weight="1">
 
-            <!-- LMK Reporting -->
+
 
                         <RelativeLayout
                             android:layout_width="fill_parent"
@@ -88,6 +89,7 @@
 
             <!-- Inner Two -->
             <LinearLayout
+                    android:id="@+id/aww_click"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="2dp"
@@ -142,6 +144,7 @@
 
             <!-- One -->
             <LinearLayout
+                android:id="@+id/pec_click"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal|center_vertical|center"
@@ -186,6 +189,7 @@
 
             <!-- TWO -->
                 <LinearLayout
+                    android:id="@+id/help"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="2dp"

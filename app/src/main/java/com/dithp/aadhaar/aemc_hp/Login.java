@@ -3,6 +3,7 @@ package com.dithp.aadhaar.aemc_hp;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
@@ -12,7 +13,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -24,20 +29,36 @@ public class Login extends Activity {
     private Button button_submit, button_getOTP;
     private EditText editText_aadhaarLogin, editText_otpLogin;
     private LinearLayout l1;
+    private TextView tv_header;
     private  String aadhaar , otp = null;
+    RelativeLayout Login_Header;
 
     URL url;
     HttpURLConnection conn;
     StringBuilder sb = new StringBuilder();
+    String HeaderText;
+    String HeaderColor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        Bundle bundle = getIntent().getExtras();
+        HeaderColor = bundle.getString("Header");
+         HeaderText = bundle.getString("Header_Text");
+
         Flag_Initialize = InitializeControls();
         if (Flag_Initialize){
-            l1.setVisibility(View.INVISIBLE);
+            Login_Header.setBackgroundColor(Color.parseColor(HeaderColor));
+            button_submit.setBackgroundColor(Color.parseColor(HeaderColor));
+            button_getOTP.setBackgroundColor(Color.parseColor(HeaderColor));
+
+            editText_aadhaarLogin.setHintTextColor(Color.parseColor("#000000"));
+            editText_otpLogin.setHintTextColor(Color.parseColor("#000000"));
+            tv_header.setText(HeaderText);
+
+            editText_otpLogin.setEnabled(false);
 
             button_getOTP.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -134,6 +155,8 @@ if(isOnline()){
             editText_aadhaarLogin = (EditText)findViewById(R.id.et_aadhaar);
             editText_otpLogin = (EditText)findViewById(R.id.et_otp);
             l1 = (LinearLayout)findViewById(R.id.otp);
+            Login_Header = (RelativeLayout)findViewById(R.id.header_login);
+            tv_header = (TextView)findViewById(R.id.tvheader);
 
 
             return true;
@@ -188,7 +211,7 @@ if(isOnline()){
                 dialog.dismiss();
                 Toast.makeText(getApplicationContext(), finalResult, Toast.LENGTH_SHORT).show();
                 editText_aadhaarLogin.setEnabled(false);
-                l1.setVisibility(View.VISIBLE);
+                editText_otpLogin.setEnabled(true);
                }
             else{
                 dialog.dismiss();
@@ -240,6 +263,9 @@ if(isOnline()){
             if(finalResult.equalsIgnoreCase(Constants.OTP_Successfull)){
                  dialog.dismiss();
                  Intent i = new Intent(Login.this,MainActivity.class);
+                 i.putExtra("Color",  HeaderColor );
+
+
                  startActivity(i);
                  Login.this.finish();
 
