@@ -133,7 +133,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:text="Center Name"
+                    android:text="PEC/ CSC/ Anganwadi Center Name"
                     android:layout_width="match_parent"
                     android:textSize="16sp"
                     android:textColor="#000000"
