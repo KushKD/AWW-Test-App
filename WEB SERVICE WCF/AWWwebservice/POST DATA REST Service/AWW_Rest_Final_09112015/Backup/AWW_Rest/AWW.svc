@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="AWW_Rest.AWW" CodeBehind="AWW.svc.cs" %>

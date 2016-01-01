@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWW_Rest", "AWW_Rest\AWW_Rest.csproj", "{AAA0EA6A-03EA-4BC6-A91D-CD9A14F6A059}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AAA0EA6A-03EA-4BC6-A91D-CD9A14F6A059}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAA0EA6A-03EA-4BC6-A91D-CD9A14F6A059}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAA0EA6A-03EA-4BC6-A91D-CD9A14F6A059}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAA0EA6A-03EA-4BC6-A91D-CD9A14F6A059}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

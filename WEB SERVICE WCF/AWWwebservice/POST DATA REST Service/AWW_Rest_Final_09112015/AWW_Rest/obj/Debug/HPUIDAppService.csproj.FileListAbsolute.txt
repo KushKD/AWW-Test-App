@@ -1,0 +1,5 @@
+H:\Data from I Drive\2 NTFS\Applications\Amit Singh\HPUIDAppService\HPUIDAppService\bin\HPUIDAppService.dll
+H:\Data from I Drive\2 NTFS\Applications\Amit Singh\HPUIDAppService\HPUIDAppService\bin\HPUIDAppService.pdb
+H:\Data from I Drive\2 NTFS\Applications\Amit Singh\HPUIDAppService\HPUIDAppService\obj\Debug\HPUIDAppService.csprojResolveAssemblyReference.cache
+H:\Data from I Drive\2 NTFS\Applications\Amit Singh\HPUIDAppService\HPUIDAppService\obj\Debug\HPUIDAppService.dll
+H:\Data from I Drive\2 NTFS\Applications\Amit Singh\HPUIDAppService\HPUIDAppService\obj\Debug\HPUIDAppService.pdb

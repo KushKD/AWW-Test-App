@@ -1,0 +1,13 @@
+C:\Users\Accenture\Desktop\TestProjects\AWW_Rest\AWW_Rest\bin\AWW_Rest.dll
+C:\Users\Accenture\Desktop\TestProjects\AWW_Rest\AWW_Rest\bin\AWW_Rest.pdb
+C:\Users\Accenture\Desktop\TestProjects\AWW_Rest\AWW_Rest\obj\Debug\AWW_Rest.dll
+C:\Users\Accenture\Desktop\TestProjects\AWW_Rest\AWW_Rest\obj\Debug\AWW_Rest.pdb
+C:\TestProjects\AWW_Rest\AWW_Rest\bin\AWW_Rest.dll
+C:\TestProjects\AWW_Rest\AWW_Rest\bin\AWW_Rest.pdb
+C:\TestProjects\AWW_Rest\AWW_Rest\obj\Debug\AWW_Rest.dll
+C:\TestProjects\AWW_Rest\AWW_Rest\obj\Debug\AWW_Rest.pdb
+D:\AWW_Rest_Final\AWW_Rest\obj\Debug\AWW_Rest.csprojResolveAssemblyReference.cache
+D:\AWW_Rest_Final\AWW_Rest\obj\Debug\AWW_Rest.dll
+D:\AWW_Rest_Final\AWW_Rest\obj\Debug\AWW_Rest.pdb
+D:\AWW_Rest_Final\AWW_Rest\bin\AWW_Rest.dll
+D:\AWW_Rest_Final\AWW_Rest\bin\AWW_Rest.pdb
